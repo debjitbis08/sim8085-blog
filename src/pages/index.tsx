@@ -1,3 +1,4 @@
+import { url } from "node:inspector";
 import Layout from "../components/Layout";
 import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
@@ -10,53 +11,32 @@ export default function Index() {
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
-      <div className="container">
+      <div className="text-center px-3 lg:px-0">
         <div>
-          <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
+          <h1 className="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight">
+            <span className="block text-indigo-600 xl:inline">Sim8085</span> <span className="block xl:inline">News &amp; Announcements</span>
           </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
-          <SocialList />
+          <p className="leading-normal text-gray-800 text-base md:text-xl lg:text-2xl mb-8">Read all about what's going on with Sim8085.</p>
+          <p className="leading-normal text-gray-500 text-base md:text-md lg:text-md mb-8">Sim8085 is a Simulator, Assembler and Debugger for Intel 8085 microprocessor.</p>
+          <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-center">
+            <div className="rounded-md shadow">
+              <a href="/posts/" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                Read Posts
+              </a>
+            </div>
+            <div className="mt-3 sm:mt-0 sm:ml-3">
+                <a href="https://www.sim8085.com" className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                  Go to app
+                </a>
+              </div>
+          </div>
         </div>
       </div>
-      <style jsx>{`
-        .container {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex: 1 1 auto;
-          padding: 0 1.5rem;
-        }
-        h1 {
-          font-size: 2.5rem;
-          margin: 0;
-          font-weight: 500;
-        }
-        h2 {
-          font-size: 1.75rem;
-          font-weight: 400;
-          line-height: 1.25;
-        }
-        .fancy {
-          color: #15847d;
-        }
-        .handle {
-          display: inline-block;
-          margin-top: 0.275em;
-          color: #9b9b9b;
-          letter-spacing: 0.05em;
-        }
-
-        @media (min-width: 769px) {
-          h1 {
-            font-size: 3rem;
-          }
-          h2 {
-            font-size: 2.25rem;
-          }
-        }
-      `}</style>
+      <div className="flex items-center w-full mx-auto justify-center">
+        <div className="browser-mockup flex flex-1 m-6 md:px-0 md:m-12 bg-white w-1/2 rounded shadow-xl" style={{ maxWidth: "1283px" }}>
+          <img src="/images/sim8085-screenshot.png"/>
+        </div>
+      </div>
     </Layout>
   );
 }

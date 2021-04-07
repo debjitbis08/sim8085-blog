@@ -59,16 +59,15 @@ export default function PostLayout({
         author={authorName}
         description={description}
       />
-      <div className={"container"}>
+      <div className="w-full md:max-w-3xl mx-auto pt-20">
         <article>
           <header>
-            <h1>{title}</h1>
-            <div className={"metadata"}>
+            <h1 className="font-bold font-sans break-normal text-gray-900 pt-6 pb-2 text-3xl md:text-4xl">{title}</h1>
+            <div className="text-sm md:text-base font-normal text-gray-600">
               <div>
                 <Date date={date} />
               </div>
               <div>
-                <Author author={getAuthor(author)} />
               </div>
             </div>
           </header>
@@ -82,9 +81,6 @@ export default function PostLayout({
           </ul>
         </article>
         <footer>
-          <div className={"social-list"}>
-            <SocialList />
-          </div>
           <Copyright />
         </footer>
       </div>

@@ -1,0 +1,50 @@
+---
+slug: next-version-2021
+title: Coming Soon! Next Version of Sim8085
+date: 2021-04-08
+author: debjit
+tags:
+  - news
+  - development
+---
+
+I am excited to share that there is new version of Sim8085 in development right now. I have been thinking about this rewrite for some time as
+I have started to see the number of users rising. There have been people, both students and professors reaching out to me from various
+colleges/universities.
+
+The old code built over two months works but now the need is to update the technology and also incorporate all
+the feedback that I have got for last few years.
+
+## What will it look like? 🎨
+
+Here is basic design that I created with my limited design skills. I will use this as a starting point and adapt while developing.
+
+![New Sim8085 Design](/assets/2021/04/07/sim8085-next-design.png)
+
+## Tech Stack 🤖
+
+The first version of the app was developed not only for providing a great 8085 learning experience but also for my learning of various
+technologies such as, Elm and asm.js. The new stack is geared more towards stability and familiarity, so that people can easily
+contribute to the project. I am moving away from C (and asm.js) and Elm towards Rust (with WASM) and React. The app will still work
+completely on the browser without any need of server. The full stack is,
+
+### Emulator
+- [Rust](https://www.rust-lang.org/)
+- [WASM](https://webassembly.org/) (using [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/))
+
+### Assembler
+- [PEG.js](https://pegjs.org)
+
+### Frontend
+- [React](https://reactjs.org/) (using [create-react-app](https://create-react-app.dev/))
+- [Redux](https://redux.js.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Blueprint](https://blueprintjs.com/)
+- [Codemirror](https://codemirror.net/)
+
+## Progress ⏳
+
+Over the last few weeks I have migrated the C code completely to Rust and now have it working. The next step is rebuilding the UI
+which I have just started.
+
+The trick is making time for development out of my day job work 😅
